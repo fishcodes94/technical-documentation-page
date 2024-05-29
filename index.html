@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Java Technical Documentation Page</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main id="main-doc">
+      <section id="introduction" class="main-section">
+        <header>Introduction</header>
+
+        <p>
+          Java is a widely-used, object-oriented programming language known for
+          its portability, robustness, and ease of use. Developed by Sun
+          Microsystems in 1995 and now maintained by Oracle Corporation, Java
+          allows developers to write code that can run on any device equipped
+          with a Java Virtual Machine (JVM). This "write once, run anywhere"
+          capability makes it ideal for cross-platform applications, ranging
+          from mobile apps to large-scale enterprise systems.
+        </p>
+        <p>
+          Java emphasizes simplicity and readability, making it accessible for
+          beginners while providing powerful features for advanced users. Its
+          extensive standard library, strong memory management, and built-in
+          security features contribute to its popularity in various domains,
+          including web development, scientific computing, and Android app
+          development.
+        </p>
+      </section>
+
+      <section id="what-you-should-already-know" class="main-section">
+        <header>What You Should Already Know</header>
+        <p>
+          Before diving into Java, you should have a basic understanding of
+          programming concepts such as variables, control structures (like loops
+          and conditionals), and functions. Familiarity with another programming
+          language, particularly an object-oriented language like C++ or Python,
+          will help you grasp Java's syntax and concepts more quickly.
+        </p>
+        <p>
+          Knowledge of basic computer science principles, such as algorithms and
+          data structures, will also be beneficial. While Java is designed to be
+          user-friendly, having a solid foundation in these areas will enable
+          you to make the most of Java's features and libraries.
+        </p>
+      </section>
+
+      <section id="javaScript-and-java" class="main-section">
+        <header>JavaScript and Java</header>
+        <p>
+          Despite their similar names, Java and JavaScript are distinct
+          languages with different uses and design philosophies. Java is a
+          statically-typed, object-oriented language primarily used for building
+          server-side applications, mobile apps, and large systems. JavaScript,
+          on the other hand, is a dynamically-typed scripting language used
+          mainly for client-side web development to create interactive web
+          pages.
+        </p>
+        <p>
+          The confusion often arises because JavaScript was named during the
+          peak of Java's popularity, but the two languages share little beyond
+          syntactic similarities. Java code is compiled into bytecode and
+          executed by the JVM, while JavaScript is interpreted by web browsers.
+          Understanding these differences is crucial when choosing the right
+          language for your project.
+        </p>
+      </section>
+
+      <section id="hello-world" class="main-section">
+        <header>Hello World</header>
+        <p>
+          Creating a "Hello World" program is a traditional way to start
+          learning a new programming language. In Java, this involves writing a
+          simple program that prints "Hello, World!" to the console. Here's a
+          basic example:
+        </p>
+        <code
+          >public class HelloWorld { public static void main(String[] args) {
+          System.out.println("Hello, World!"); } }</code
+        >
+        <p>
+          This program consists of a class named HelloWorld and a main method,
+          which is the entry point for any Java application. The
+          System.out.println statement outputs the text to the console. Save
+          this code in a file named HelloWorld.java, compile it using javac
+          HelloWorld.java, and run it with java HelloWorld.
+        </p>
+      </section>
+
+      <section id="variables" class="main-section">
+        <header>Variables</header>
+        <p>
+          Variables in Java are used to store data that can be manipulated
+          throughout the program. Each variable has a data type that defines the
+          kind of data it can hold, such as integers, floating-point numbers,
+          characters, and more. Java's strong typing system ensures that
+          variables must be declared with a specific type before they can be
+          used.
+        </p>
+        <p>
+          Variables are fundamental in Java for storing values, performing
+          calculations, and controlling the flow of the program. Proper variable
+          naming and usage enhance code readability and maintainability, making
+          it easier to understand and modify your code.
+        </p>
+      </section>
+
+      <section id="declaring-variables" class="main-section">
+        <header>Declaring Variables</header>
+        <p>
+          In Java, variables are declared by specifying the data type followed
+          by the variable name. Here's an example:
+        </p>
+        <code> int age; double salary; char initial; </code>
+        <p>Variables can also be initialized during declaration:</p>
+        <code>
+          int age = 25; double salary = 55000.75; char initial = 'J';
+        </code>
+        <p>
+          Declaring variables correctly is crucial for efficient memory usage
+          and avoiding runtime errors. Java's type system helps catch type
+          mismatches at compile time, ensuring that variables are used
+          consistently throughout the program.
+        </p>
+      </section>
+
+      <section id="variable-scope" class="main-section">
+        <header>Variable Scope</header>
+        <p>
+          Variable scope refers to the region of the program where a variable is
+          accessible. In Java, scopes are defined by curly braces {}. There are
+          three main types of variable scopes: local, instance, and class
+          (static). Local variables are declared within methods or blocks and
+          are accessible only within that context.
+        </p>
+        <p>
+          Instance variables, declared within a class but outside any method,
+          are accessible to all methods of the class. Class variables, declared
+          with the static keyword, are shared among all instances of the class.
+          Understanding scope is vital for managing variable lifetimes and
+          preventing unintended interactions.
+        </p>
+      </section>
+
+      <section id="global-variables" class="main-section">
+        <header>Global Variables</header>
+        <p>
+          Java does not support true global variables as it adheres to
+          object-oriented principles. However, class variables (declared with
+          the static keyword) can serve a similar purpose by being accessible
+          throughout the application. These variables are associated with the
+          class itself rather than any specific instance.
+        </p>
+
+        <code>
+          public class Example { public static int globalVar = 10; }
+        </code>
+
+        <p>
+          In the above example, globalVar can be accessed using
+          Example.globalVar from anywhere in the program. Using such variables
+          sparingly and judiciously helps avoid potential conflicts and maintain
+          code clarity.
+        </p>
+      </section>
+
+      <section id="constants" class="main-section">
+        <header>Constants</header>
+        <p>
+          Constants are variables whose values cannot be changed once assigned.
+          In Java, constants are declared using the final keyword. It's common
+          practice to name constants in all uppercase letters with underscores
+          separating words.
+        </p>
+        <code> public static final int MAX_USERS = 100; </code>
+        <p>
+          Constants improve code readability and maintainability by providing
+          meaningful names for fixed values used throughout the program. They
+          also prevent accidental modifications, ensuring the integrity of
+          values that should remain unchanged.
+        </p>
+      </section>
+
+      <section id="data-types" class="main-section">
+        <header>Data Types</header>
+        <p>
+          Java provides a rich set of data types to handle different kinds of
+          data. These include primitive data types like int, double, char, and
+          boolean, as well as reference data types like arrays, strings, and
+          objects. Primitive types are predefined by the language and serve as
+          the building blocks for data manipulation.
+        </p>
+        <p>
+          Reference types, on the other hand, are objects created from classes.
+          Understanding and using these data types effectively allows for
+          efficient memory management and optimal performance in Java
+          applications.
+        </p>
+      </section>
+
+      <section id="if...els-statement" class="main-section">
+        <header>if...else Statement</header>
+        <p>
+          The if...else statement in Java is used for conditional execution of
+          code blocks. It allows the program to make decisions and execute
+          different code paths based on boolean expressions.
+        </p>
+        <code>
+          if (condition) { // code to execute if condition is true } else { //
+          code to execute if condition is false }
+        </code>
+        <p>
+          Multiple conditions can be handled using else if. Properly utilizing
+          if...else statements is essential for controlling the flow of a Java
+          program and implementing logic that reacts to different conditions.
+        </p>
+      </section>
+
+      <section id="while-statement" class="main-section">
+        <header>while Statement</header>
+        <p>
+          The while statement in Java is a control flow statement that allows
+          code to be executed repeatedly based on a given boolean condition. The
+          loop continues as long as the condition remains true.
+        </p>
+        <code
+          >while (condition) { // code to execute while condition is true }
+        </code>
+        <p>
+          The condition is evaluated before each iteration, making while loops
+          ideal for scenarios where the number of iterations is not known
+          beforehand. Careful use of while statements helps in writing loops
+          that effectively manage repetitive tasks.
+        </p>
+      </section>
+
+      <section id="function-declarations" class="main-section">
+        <header>Function Declarations</header>
+        <p>
+          In Java, functions are defined within classes and are known as
+          methods. A method declaration specifies the method's return type,
+          name, and parameters. Here's an example:
+        </p>
+        <code> public int add(int a, int b) {return a + b; } </code>
+
+        <p>
+          This method add takes two integers as parameters and returns their
+          sum. Methods in Java enhance code modularity and reusability, allowing
+          you to break down complex tasks into manageable, reusable code blocks.
+        </p>
+      </section>
+
+      <section id="reference" class="main-section">
+        <header>Reference</header>
+        <p>
+          For more information and detailed tutorials on Java programming, refer
+          to the following resources:
+        </p>
+
+        <ul id="reference-list">
+          <li>
+            Oracle's Official Java
+            <a href="https://docs.oracle.com/en/java/"> Documentation</a>
+          </li>
+          <li>
+            Java Programming Tutorial on
+            <a href="https://www.tutorialspoint.com/java/index.htm"
+              >TutorialsPoint</a
+            >
+          </li>
+          <li>
+            Java Tutorials on
+            <a href="https://www.geeksforgeeks.org/java/">GeeksforGeeks</a>
+          </li>
+          <li>
+            Java SE Development Kit (JDK)<a
+              href="https://docs.oracle.com/en/java/javase/17/"
+            >
+              Documentation</a
+            >
+          </li>
+        </ul>
+
+        <p>
+          These resources provide comprehensive guides, examples, and reference
+          material to deepen your understanding of Java programming.
+        </p>
+      </section>
+    </main>
+    <nav id="navbar">
+      <header>Java Documentation</header>
+      <ul>
+        <li><a href="#introduction" class="nav-link"> Introduction</a></li>
+        <li>
+          <a href="#what-you-should-already-know" class="nav-link">
+            What You Should Already Know</a
+          >
+        </li>
+        <li>
+          <a href="#javaScript-and-java" class="nav-link"
+            >JavaScript and Java
+          </a>
+        </li>
+        <li><a href="#hello-world" class="nav-link">Hello World </a></li>
+        <li><a href="#variables" class="nav-link"> Variables</a></li>
+        <li>
+          <a href="#declaring-variables" class="nav-link"
+            >Declaring Variables
+          </a>
+        </li>
+        <li><a href="#variable-scope" class="nav-link"> Variable Scope</a></li>
+        <li>
+          <a href="#global-variables" class="nav-link">Global Variables </a>
+        </li>
+        <li><a href="#constants" class="nav-link">Constants </a></li>
+        <li><a href="#data-types" class="nav-link">Data Types </a></li>
+        <li>
+          <a href="#if...els-statement" class="nav-link">
+            if...else Statement</a
+          >
+        </li>
+        <li>
+          <a href="#while-statement" class="nav-link">while Statement </a>
+        </li>
+        <li>
+          <a href="#function-declarations" class="nav-link"
+            >Function Declarations</a
+          >
+        </li>
+        <li><a href="#reference" class="nav-link">Reference</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
